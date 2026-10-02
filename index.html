@@ -1,0 +1,2856 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+
+<title>Santa Bárbara, Honduras | Mirna Yaneth Amaya Morales</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =========================================================
+   ESTILO GENERAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'DM Sans',sans-serif;
+    background:#f7f4ed;
+    color:#24352b;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+
+/* =========================================================
+   CURSOR / SELECCIÓN
+========================================================= */
+
+::selection{
+    background:#d7b86b;
+    color:#142b20;
+}
+
+
+/* =========================================================
+   BARRA DE NAVEGACIÓN
+========================================================= */
+
+.navbar{
+
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:calc(100% - 45px);
+    max-width:1250px;
+
+    padding:13px 23px;
+
+    background:rgba(20,43,32,.88);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:9999;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.18);
+}
+
+.logo{
+
+    font-family:'Playfair Display',serif;
+    font-size:22px;
+    font-weight:700;
+    color:white;
+}
+
+.logo span{
+    color:#d7b86b;
+}
+
+.nav-links{
+    display:flex;
+    gap:21px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    font-size:13px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#d7b86b;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(8,28,18,.92),
+        rgba(8,28,18,.52),
+        rgba(8,28,18,.12)
+    ),
+    url("images/pic01.jpg") center/cover no-repeat;
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at 80% 30%,
+        rgba(215,184,107,.18),
+        transparent 30%
+    );
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(7,24,16,.85),
+        transparent 55%
+    );
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:3;
+
+    width:min(1150px,90%);
+
+    margin:auto;
+
+    color:white;
+
+    padding-top:70px;
+}
+
+.hero-badge{
+
+    display:inline-block;
+
+    padding:8px 17px;
+
+    border:1px solid rgba(255,255,255,.4);
+
+    border-radius:30px;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    opacity:0;
+
+    animation:fadeDown 1s forwards;
+}
+
+.animated-title{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(52px,8vw,105px);
+
+    line-height:.98;
+
+    margin:24px 0;
+
+    overflow:hidden;
+}
+
+.animated-title span{
+
+    display:block;
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    filter:blur(8px);
+
+    animation:slideUp 1.2s forwards;
+}
+
+.animated-title span:nth-child(1){
+    animation-delay:.35s;
+}
+
+.animated-title span:nth-child(2){
+    color:#d7b86b;
+    animation-delay:.7s;
+}
+
+.hero h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(22px,3vw,34px);
+
+    font-weight:500;
+
+    margin-bottom:16px;
+
+    opacity:0;
+
+    animation:fadeUp 1s 1.3s forwards;
+}
+
+.hero p{
+
+    max-width:680px;
+
+    font-size:17px;
+
+    color:rgba(255,255,255,.87);
+
+    opacity:0;
+
+    animation:fadeUp 1s 1.5s forwards;
+}
+
+.hero-author{
+
+    margin:22px 0 30px;
+
+    font-size:14px;
+
+    color:rgba(255,255,255,.75);
+
+    opacity:0;
+
+    animation:fadeUp 1s 1.8s forwards;
+}
+
+.hero-author strong{
+    color:#d7b86b;
+}
+
+.hero-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 25px;
+
+    background:#d7b86b;
+
+    color:#17291e;
+
+    border-radius:40px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    opacity:0;
+
+    animation:fadeUp 1s 2s forwards;
+
+    transition:.3s;
+}
+
+.hero-button:hover{
+    transform:translateY(-5px);
+    background:#ead08b;
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+.scroll-down{
+
+    position:absolute;
+
+    bottom:30px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-size:20px;
+
+    z-index:4;
+
+    animation:float 2s infinite;
+}
+
+
+/* =========================================================
+   FIRMA DE MIRNA
+========================================================= */
+
+.signature{
+
+    position:absolute;
+
+    right:7%;
+    bottom:35px;
+
+    z-index:4;
+
+    color:rgba(255,255,255,.72);
+
+    font-family:'Playfair Display',serif;
+
+    font-style:italic;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+}
+
+.signature i{
+    color:#d7b86b;
+    margin-right:7px;
+}
+
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+.section{
+    padding:105px 7%;
+}
+
+.section-light{
+    background:#f7f4ed;
+}
+
+.section-white{
+    background:white;
+}
+
+.section-green{
+    background:#183629;
+    color:white;
+}
+
+.section-title{
+    max-width:760px;
+    margin-bottom:55px;
+}
+
+.eyebrow{
+
+    color:#a5833e;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+}
+
+.section-title h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(38px,5vw,64px);
+
+    line-height:1.1;
+
+    margin-bottom:17px;
+}
+
+.section-title p{
+    color:#69756e;
+}
+
+.section-green .section-title p{
+    color:rgba(255,255,255,.72);
+}
+
+
+/* =========================================================
+   INTRODUCCIÓN
+========================================================= */
+
+.intro-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.intro-image{
+    position:relative;
+}
+
+.intro-image img{
+
+    width:100%;
+    height:550px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+    box-shadow:20px 20px 0 #d7b86b;
+}
+
+.intro-text h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+}
+
+.intro-text p{
+
+    color:#69756e;
+
+    margin-bottom:18px;
+}
+
+.highlight{
+
+    border-left:4px solid #d7b86b;
+
+    padding-left:20px;
+
+    font-style:italic;
+
+    color:#506158;
+
+    margin-top:25px;
+}
+
+
+/* =========================================================
+   TARJETA "MI MIRADA"
+========================================================= */
+
+.mirada{
+
+    background:#142b20;
+
+    color:white;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.mirada::before{
+
+    content:"M";
+
+    position:absolute;
+
+    right:4%;
+
+    top:-50px;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:350px;
+
+    color:rgba(255,255,255,.025);
+}
+
+.mirada-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.mirada h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:55px;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+}
+
+.mirada p{
+
+    color:rgba(255,255,255,.75);
+
+    margin-bottom:20px;
+}
+
+.mirada-quote{
+
+    border-left:3px solid #d7b86b;
+
+    padding-left:20px;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:23px;
+
+    color:#d7b86b;
+}
+
+.mirada-card{
+
+    padding:40px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(10px);
+}
+
+.mirada-card i{
+
+    font-size:35px;
+
+    color:#d7b86b;
+
+    margin-bottom:20px;
+}
+
+.mirada-card h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:29px;
+
+    margin-bottom:12px;
+}
+
+
+/* =========================================================
+   DATOS DESTACADOS
+========================================================= */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+}
+
+.stat{
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    background:#f1eee5;
+
+    border-bottom:3px solid #d7b86b;
+
+}
+
+.stat i{
+
+    font-size:25px;
+
+    color:#28543d;
+
+    margin-bottom:12px;
+}
+
+.stat h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:24px;
+}
+
+
+/* =========================================================
+   NATURALEZA
+========================================================= */
+
+.full-image{
+
+    min-height:620px;
+
+    background:
+    linear-gradient(
+        rgba(12,35,24,.52),
+        rgba(12,35,24,.7)
+    ),
+    url("images/pic03.jpg") center/cover no-repeat;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.full-content{
+    max-width:850px;
+}
+
+.full-content h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(42px,6vw,75px);
+
+    margin-bottom:20px;
+}
+
+.full-content p{
+    font-size:18px;
+    color:rgba(255,255,255,.84);
+}
+
+
+/* =========================================================
+   EXPERIENCIAS
+========================================================= */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+}
+
+.card{
+
+    background:white;
+
+    padding:35px;
+
+    border:1px solid #e7e1d4;
+
+    border-radius:10px;
+
+    transition:.35s;
+
+    box-shadow:0 8px 30px rgba(27,48,36,.05);
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(27,48,36,.12);
+}
+
+.card-icon{
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    background:#edf0e8;
+
+    color:#28543d;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:22px;
+
+    margin-bottom:25px;
+}
+
+.card h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:27px;
+
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#707b74;
+}
+
+
+/* =========================================================
+   "5 SENTIDOS"
+========================================================= */
+
+.sentidos{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:15px;
+}
+
+.sentido{
+
+    min-height:220px;
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    background:#183629;
+
+    color:white;
+
+    border-radius:8px;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.sentido:hover{
+    transform:translateY(-8px);
+}
+
+.sentido i{
+
+    position:absolute;
+
+    top:25px;
+    right:25px;
+
+    font-size:28px;
+
+    color:#d7b86b;
+}
+
+.sentido h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:25px;
+
+    margin-bottom:5px;
+}
+
+.sentido p{
+
+    font-size:13px;
+
+    color:rgba(255,255,255,.72);
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-section{
+    background:#efe9dc;
+}
+
+.video-container{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    border:8px solid white;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
+}
+
+.video-container iframe{
+
+    width:100%;
+
+    height:550px;
+
+    display:block;
+
+    border:0;
+}
+
+
+/* =========================================================
+   GALERÍA
+========================================================= */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+}
+
+.gallery-item{
+
+    height:260px;
+
+    overflow:hidden;
+
+    border-radius:7px;
+
+    position:relative;
+}
+
+.gallery-item:nth-child(3n){
+    height:330px;
+}
+
+.gallery-item img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.1);
+}
+
+.gallery-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:12px;
+
+    border:1px solid rgba(255,255,255,.7);
+
+    opacity:0;
+
+    transition:.4s;
+}
+
+.gallery-item:hover::after{
+    opacity:1;
+}
+
+
+/* =========================================================
+   CULTURA
+========================================================= */
+
+.culture-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.culture-card{
+
+    min-height:430px;
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    overflow:hidden;
+
+    border-radius:8px;
+}
+
+.culture-card:nth-child(1){
+    background-image:url("images/11.jpg");
+}
+
+.culture-card:nth-child(2){
+    background-image:url("images/12.jpg");
+}
+
+.culture-card:nth-child(3){
+    background-image:url("images/13.jpg");
+}
+
+.culture-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        transparent 30%,
+        rgba(0,0,0,.88)
+    );
+}
+
+.culture-content{
+
+    position:relative;
+
+    z-index:2;
+
+    color:white;
+
+    padding:30px;
+}
+
+.culture-content h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+}
+
+
+/* =========================================================
+   CAFÉ
+========================================================= */
+
+.coffee-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.coffee-image img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:7px;
+}
+
+.coffee-text h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:55px;
+}
+
+.coffee-text p{
+    color:#69756e;
+    margin-bottom:20px;
+}
+
+.coffee-line{
+
+    height:1px;
+
+    background:#d7b86b;
+
+    width:90px;
+
+    margin:25px 0;
+}
+
+
+/* =========================================================
+   SABÍAS QUE
+========================================================= */
+
+.facts{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.fact{
+
+    padding:30px;
+
+    background:#f1eee5;
+
+    border-radius:8px;
+
+    position:relative;
+}
+
+.fact span{
+
+    position:absolute;
+
+    right:20px;
+    top:15px;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:45px;
+
+    color:rgba(165,131,62,.18);
+}
+
+.fact i{
+
+    color:#28543d;
+
+    font-size:25px;
+
+    margin-bottom:15px;
+}
+
+.fact h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+}
+
+.fact p{
+    color:#69756e;
+}
+
+
+/* =========================================================
+   MENSAJE
+========================================================= */
+
+.message{
+
+    background:
+    linear-gradient(
+        rgba(19,52,37,.9),
+        rgba(19,52,37,.9)
+    ),
+    url("images/14.jpg") center/cover;
+
+    color:white;
+
+    text-align:center;
+}
+
+.message-inner{
+    max-width:850px;
+    margin:auto;
+}
+
+.message i{
+
+    font-size:38px;
+
+    color:#d7b86b;
+
+    margin-bottom:25px;
+}
+
+.message h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(35px,5vw,60px);
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+}
+
+
+/* =========================================================
+   INFORMACIÓN
+========================================================= */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.info-box{
+
+    padding:35px;
+
+    background:#f1eee5;
+
+    border-top:3px solid #d7b86b;
+}
+
+.info-box i{
+
+    font-size:25px;
+
+    color:#28543d;
+
+    margin-bottom:15px;
+}
+
+.info-box h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:25px;
+}
+
+
+/* =========================================================
+   REDES
+========================================================= */
+
+.social-section{
+    background:#f7f4ed;
+}
+
+.social-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+}
+
+.social-card{
+
+    background:white;
+
+    border:1px solid #e5dfd2;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    border-radius:8px;
+
+    transition:.35s;
+}
+
+.social-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#d7b86b;
+
+    box-shadow:0 18px 40px rgba(20,43,32,.12);
+}
+
+.social-card-icon{
+
+    width:52px;
+    height:52px;
+
+    min-width:52px;
+
+    border-radius:50%;
+
+    background:#183629;
+
+    color:#d7b86b;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+}
+
+.social-card h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:21px;
+}
+
+.social-card p{
+
+    font-size:12px;
+
+    color:#78827c;
+}
+
+
+/* =========================================================
+   AUTORA
+========================================================= */
+
+.author{
+
+    background:#142b20;
+
+    color:white;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.author::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border:1px solid rgba(215,184,107,.15);
+
+    border-radius:50%;
+
+    top:-130px;
+    left:-100px;
+}
+
+.author::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    border:1px solid rgba(215,184,107,.1);
+
+    border-radius:50%;
+
+    right:-180px;
+    bottom:-200px;
+}
+
+.author h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:48px;
+
+    margin-bottom:10px;
+}
+
+.author-name{
+
+    color:#d7b86b;
+
+    font-size:21px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+}
+
+.author p{
+
+    max-width:680px;
+
+    margin:auto;
+
+    color:rgba(255,255,255,.7);
+}
+
+.social{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:30px;
+}
+
+.social a{
+
+    width:48px;
+    height:48px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    transition:.3s;
+}
+
+.social a:hover{
+
+    background:#d7b86b;
+
+    color:#142b20;
+
+    transform:translateY(-5px);
+}
+
+
+/* =========================================================
+   FIRMA FINAL
+========================================================= */
+
+.final-signature{
+
+    margin-top:45px;
+
+    font-family:'Playfair Display',serif;
+
+    font-style:italic;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:15px;
+}
+
+.final-signature span{
+    color:#d7b86b;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    background:#0d1d15;
+
+    color:rgba(255,255,255,.6);
+
+    text-align:center;
+
+    padding:27px;
+
+    font-size:13px;
+}
+
+footer strong{
+    color:#d7b86b;
+}
+
+
+/* =========================================================
+   BOTÓN ARRIBA
+========================================================= */
+
+.top-button{
+
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    background:#d7b86b;
+
+    color:#17291e;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    z-index:500;
+
+    opacity:.65;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.top-button:hover{
+    transform:translateY(-5px);
+}
+
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.reveal.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+@keyframes slideUp{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+        filter:blur(0);
+    }
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translate(-50%,0);
+    }
+
+    50%{
+        transform:translate(-50%,9px);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .intro-grid,
+    .mirada-grid,
+    .coffee-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cards,
+    .culture-grid,
+    .facts,
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .sentidos{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .social-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .signature{
+        display:none;
+    }
+}
+
+@media(max-width:600px){
+
+    .section{
+        padding:75px 6%;
+    }
+
+    .hero-content{
+        padding-top:60px;
+    }
+
+    .animated-title{
+        font-size:48px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .intro-image img{
+        height:400px;
+    }
+
+    .mirada h2{
+        font-size:40px;
+    }
+
+    .stats,
+    .sentidos,
+    .gallery,
+    .social-cards{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item,
+    .gallery-item:nth-child(3n){
+        height:300px;
+    }
+
+    .video-container iframe{
+        height:280px;
+    }
+
+    .coffee-text h2{
+        font-size:42px;
+    }
+
+    .author h2{
+        font-size:38px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVEGACIÓN
+========================================================= -->
+
+<nav class="navbar">
+
+<a href="#inicio" class="logo">
+Santa <span>Bárbara</span>
+</a>
+
+<ul class="nav-links">
+
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#conoce">Conoce</a></li>
+<li><a href="#mirada">Mi mirada</a></li>
+<li><a href="#experiencias">Experiencias</a></li>
+<li><a href="#galeria">Galería</a></li>
+<li><a href="#cultura">Cultura</a></li>
+<li><a href="#video">Video</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- =========================================================
+     INICIO
+========================================================= -->
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+HONDURAS · NATURALEZA · CULTURA · TRADICIÓN
+</div>
+
+<h1 class="animated-title">
+
+<span>Bienvenidos a</span>
+
+<span>Santa Bárbara</span>
+
+</h1>
+
+<h2>
+Descubramos juntos la belleza de Honduras
+</h2>
+
+<p>
+Un lugar donde la naturaleza, la cultura,
+las tradiciones y la calidez de su gente
+se unen para crear experiencias inolvidables.
+</p>
+
+<div class="hero-author">
+
+Explorado y presentado por
+
+<strong>
+Mirna Yaneth Amaya Morales
+</strong>
+
+</div>
+
+<a href="#conoce" class="hero-button">
+
+EXPLORAR SANTA BÁRBARA
+
+<i class="fa-solid fa-arrow-down"></i>
+
+</a>
+
+</div>
+
+
+<div class="signature">
+
+<i class="fa-solid fa-feather"></i>
+
+Una mirada de Mirna
+
+</div>
+
+
+<a href="#conoce" class="scroll-down">
+
+<i class="fa-solid fa-chevron-down"></i>
+
+</a>
+
+</section>
+
+
+<!-- =========================================================
+     CONOCE
+========================================================= -->
+
+<section class="section section-light" id="conoce">
+
+<div class="intro-grid">
+
+<div class="intro-image reveal">
+
+<img src="images/pic02.jpg"
+alt="Santa Bárbara, Honduras">
+
+</div>
+
+<div class="intro-text reveal">
+
+<div class="eyebrow">
+Un destino por descubrir
+</div>
+
+<h3>
+Conoce Santa Bárbara
+</h3>
+
+<p>
+Santa Bárbara es un departamento lleno
+de riqueza natural, cultural y humana.
+Sus paisajes, montañas, comunidades
+y tradiciones representan una parte
+especial de la identidad de Honduras.
+</p>
+
+<p>
+Explorar este lugar es descubrir espacios
+donde la naturaleza se encuentra con la
+historia, las costumbres y la hospitalidad
+de su gente.
+</p>
+
+<div class="highlight">
+
+“Cada rincón de Honduras guarda una historia
+que merece ser conocida, valorada y compartida.”
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     MI MIRADA
+========================================================= -->
+
+<section class="section mirada" id="mirada">
+
+<div class="mirada-grid">
+
+<div class="reveal">
+
+<div class="eyebrow" style="color:#d7b86b;">
+Una mirada personal
+</div>
+
+<h2>
+Santa Bárbara desde mi mirada
+</h2>
+
+<p>
+Este proyecto nace de una idea sencilla:
+mostrar que Honduras tiene lugares,
+historias y tradiciones que merecen ser
+conocidos y valorados.
+</p>
+
+<p>
+A través de este espacio quiero compartir
+una pequeña parte de la belleza de Santa
+Bárbara y transmitir el orgullo de descubrir
+lo que tenemos cerca.
+</p>
+
+<div class="mirada-quote">
+“Conocer lo nuestro es también aprender
+a valorarlo.”
+</div>
+
+</div>
+
+
+<div class="mirada-card reveal">
+
+<i class="fa-solid fa-feather-pointed"></i>
+
+<h3>
+Creado por Mirna
+</h3>
+
+<p>
+Diseñado, organizado y presentado por
+<strong>Mirna Yaneth Amaya Morales</strong>
+como un proyecto académico dedicado
+a mostrar la riqueza turística y cultural
+de Santa Bárbara.
+</p>
+
+<p>
+Cada sección busca combinar información,
+fotografía, diseño y creatividad para
+crear una experiencia diferente.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     DATOS
+========================================================= -->
+
+<section class="section section-white">
+
+<div class="section-title reveal">
+
+<div class="eyebrow">
+En pocas palabras
+</div>
+
+<h2>
+Santa Bárbara en datos
+</h2>
+
+<p>
+Algunos elementos que representan la esencia
+de este hermoso rincón de Honduras.
+</p>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat reveal">
+
+<i class="fa-solid fa-mountain-sun"></i>
+
+<h3>
+Naturaleza
+</h3>
+
+<p>
+Montañas y paisajes
+</p>
+
+</div>
+
+
+<div class="stat reveal">
+
+<i class="fa-solid fa-mug-hot"></i>
+
+<h3>
+Café
+</h3>
+
+<p>
+Tradición y trabajo
+</p>
+
+</div>
+
+
+<div class="stat reveal">
+
+<i class="fa-solid fa-people-group"></i>
+
+<h3>
+Comunidad
+</h3>
+
+<p>
+Calidez de su gente
+</p>
+
+</div>
+
+
+<div class="stat reveal">
+
+<i class="fa-solid fa-heart"></i>
+
+<h3>
+Identidad
+</h3>
+
+<p>
+Orgullo hondureño
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     NATURALEZA
+========================================================= -->
+
+<section class="full-image">
+
+<div class="full-content reveal">
+
+<div class="eyebrow" style="color:#d7b86b;">
+Naturaleza
+</div>
+
+<h2>
+Entre montañas y paisajes
+</h2>
+
+<p>
+Descubre la belleza natural que convierte
+a Santa Bárbara en un lugar lleno de vida,
+tranquilidad y paisajes que invitan a
+detenerse y disfrutar.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCIAS
+========================================================= -->
+
+<section class="section section-white" id="experiencias">
+
+<div class="section-title reveal">
+
+<div class="eyebrow">
+Vive la experiencia
+</div>
+
+<h2>
+Un destino lleno de experiencias
+</h2>
+
+<p>
+Santa Bárbara ofrece diferentes formas
+de conectar con su naturaleza, cultura
+y tradiciones.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card reveal">
+
+<div class="card-icon">
+<i class="fa-solid fa-mountain-sun"></i>
+</div>
+
+<h3>Paisajes</h3>
+
+<p>
+Montañas, naturaleza y escenarios que
+permiten disfrutar de la tranquilidad
+y belleza de Honduras.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="card-icon">
+<i class="fa-solid fa-people-group"></i>
+</div>
+
+<h3>Tradiciones</h3>
+
+<p>
+Costumbres y expresiones culturales
+que forman parte de la identidad
+de sus comunidades.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="card-icon">
+<i class="fa-solid fa-mug-hot"></i>
+</div>
+
+<h3>Café</h3>
+
+<p>
+El café forma parte de la cultura
+y economía de muchas comunidades
+de esta región de Honduras.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CINCO SENTIDOS
+========================================================= -->
+
+<section class="section section-light">
+
+<div class="section-title reveal">
+
+<div class="eyebrow">
+Una experiencia diferente
+</div>
+
+<h2>
+Santa Bárbara en cinco sentidos
+</h2>
+
+<p>
+Porque un lugar no solamente se visita:
+también se observa, se escucha,
+se saborea y se siente.
+</p>
+
+</div>
+
+
+<div class="sentidos">
+
+<div class="sentido reveal">
+
+<i class="fa-solid fa-eye"></i>
+
+<h3>Mirar</h3>
+
+<p>
+Paisajes, montañas y naturaleza.
+</p>
+
+</div>
+
+
+<div class="sentido reveal">
+
+<i class="fa-solid fa-ear-listen"></i>
+
+<h3>Escuchar</h3>
+
+<p>
+La tranquilidad y los sonidos de sus comunidades.
+</p>
+
+</div>
+
+
+<div class="sentido reveal">
+
+<i class="fa-solid fa-mug-hot"></i>
+
+<h3>Saborear</h3>
+
+<p>
+El aroma y sabor de un buen café.
+</p>
+
+</div>
+
+
+<div class="sentido reveal">
+
+<i class="fa-solid fa-hand-holding-heart"></i>
+
+<h3>Sentir</h3>
+
+<p>
+La calidez de su gente y sus tradiciones.
+</p>
+
+</div>
+
+
+<div class="sentido reveal">
+
+<i class="fa-solid fa-camera"></i>
+
+<h3>Recordar</h3>
+
+<p>
+Momentos que se convierten en recuerdos.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     VIDEO
+========================================================= -->
+
+<section class="section video-section" id="video">
+
+<div class="section-title reveal">
+
+<div class="eyebrow">
+Conoce más
+</div>
+
+<h2>
+Santa Bárbara en imágenes
+</h2>
+
+<p>
+Una pequeña muestra visual para descubrir
+parte de la belleza de este destino hondureño.
+</p>
+
+</div>
+
+
+<div class="video-container reveal">
+
+<iframe
+src="https://www.youtube.com/embed/z-5Vw5oDd2A"
+title="Santa Bárbara, Honduras"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     GALERÍA
+========================================================= -->
+
+<section class="section section-light" id="galeria">
+
+<div class="section-title reveal">
+
+<div class="eyebrow">
+Galería
+</div>
+
+<h2>
+Postales de Santa Bárbara
+</h2>
+
+<p>
+Una colección visual para apreciar
+diferentes paisajes y momentos de
+este hermoso departamento.
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="gallery-item reveal"><img src="images/01.jpg" alt="Santa Bárbara 01"></div>
+<div class="gallery-item reveal"><img src="images/02.jpg" alt="Santa Bárbara 02"></div>
+<div class="gallery-item reveal"><img src="images/03.jpg" alt="Santa Bárbara 03"></div>
+<div class="gallery-item reveal"><img src="images/04.jpg" alt="Santa Bárbara 04"></div>
+<div class="gallery-item reveal"><img src="images/05.jpg" alt="Santa Bárbara 05"></div>
+<div class="gallery-item reveal"><img src="images/06.jpg" alt="Santa Bárbara 06"></div>
+<div class="gallery-item reveal"><img src="images/07.jpg" alt="Santa Bárbara 07"></div>
+<div class="gallery-item reveal"><img src="images/08.jpg" alt="Santa Bárbara 08"></div>
+<div class="gallery-item reveal"><img src="images/09.jpg" alt="Santa Bárbara 09"></div>
+<div class="gallery-item reveal"><img src="images/10.jpg" alt="Santa Bárbara 10"></div>
+<div class="gallery-item reveal"><img src="images/11.jpg" alt="Santa Bárbara 11"></div>
+<div class="gallery-item reveal"><img src="images/12.jpg" alt="Santa Bárbara 12"></div>
+<div class="gallery-item reveal"><img src="images/13.jpg" alt="Santa Bárbara 13"></div>
+<div class="gallery-item reveal"><img src="images/14.jpg" alt="Santa Bárbara 14"></div>
+<div class="gallery-item reveal"><img src="images/15.jpg" alt="Santa Bárbara 15"></div>
+<div class="gallery-item reveal"><img src="images/16.jpg" alt="Santa Bárbara 16"></div>
+<div class="gallery-item reveal"><img src="images/17.jpg" alt="Santa Bárbara 17"></div>
+<div class="gallery-item reveal"><img src="images/18.jpg" alt="Santa Bárbara 18"></div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CULTURA
+========================================================= -->
+
+<section class="section section-green" id="cultura">
+
+<div class="section-title reveal">
+
+<div class="eyebrow" style="color:#d7b86b;">
+Identidad hondureña
+</div>
+
+<h2>
+Cultura y tradiciones
+</h2>
+
+<p>
+La identidad de Santa Bárbara se construye
+a través de sus comunidades, costumbres,
+celebraciones y formas de vida.
+</p>
+
+</div>
+
+
+<div class="culture-grid">
+
+<div class="culture-card reveal">
+
+<div class="culture-content">
+
+<h3>Tradición</h3>
+
+<p>
+Costumbres que pasan de generación
+en generación.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="culture-card reveal">
+
+<div class="culture-content">
+
+<h3>Comunidad</h3>
+
+<p>
+La calidez de las personas forma
+parte de la esencia de este destino.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="culture-card reveal">
+
+<div class="culture-content">
+
+<h3>Identidad</h3>
+
+<p>
+Una combinación de historia, cultura
+y orgullo por las raíces hondureñas.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CAFÉ
+========================================================= -->
+
+<section class="section section-light">
+
+<div class="coffee-grid">
+
+<div class="coffee-image reveal">
+
+<img src="images/06.jpg"
+alt="Café de Santa Bárbara">
+
+</div>
+
+<div class="coffee-text reveal">
+
+<div class="eyebrow">
+Una tradición especial
+</div>
+
+<h2>
+El sabor del café
+</h2>
+
+<div class="coffee-line"></div>
+
+<p>
+El café representa una parte importante
+de la identidad y del trabajo de muchas
+familias hondureñas.
+</p>
+
+<p>
+Detrás de cada taza existe esfuerzo,
+dedicación, tradición y el trabajo
+de quienes cultivan la tierra.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     SABÍAS QUE
+========================================================= -->
+
+<section class="section section-white">
+
+<div class="section-title reveal">
+
+<div class="eyebrow">
+Pequeños detalles
+</div>
+
+<h2>
+¿Sabías que...?
+</h2>
+
+<p>
+Hay muchos elementos que hacen especial
+la identidad de Santa Bárbara.
+</p>
+
+</div>
+
+
+<div class="facts">
+
+<div class="fact reveal">
+
+<span>01</span>
+
+<i class="fa-solid fa-leaf"></i>
+
+<h3>
+Naturaleza
+</h3>
+
+<p>
+Sus paisajes naturales forman parte
+de la riqueza turística de Honduras.
+</p>
+
+</div>
+
+
+<div class="fact reveal">
+
+<span>02</span>
+
+<i class="fa-solid fa-mug-hot"></i>
+
+<h3>
+Café
+</h3>
+
+<p>
+La producción de café representa
+una tradición importante para muchas
+familias de la región.
+</p>
+
+</div>
+
+
+<div class="fact reveal">
+
+<span>03</span>
+
+<i class="fa-solid fa-heart"></i>
+
+<h3>
+Orgullo hondureño
+</h3>
+
+<p>
+Sus costumbres y tradiciones contribuyen
+a conservar la identidad cultural.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     MENSAJE
+========================================================= -->
+
+<section class="section message">
+
+<div class="message-inner reveal">
+
+<i class="fa-solid fa-leaf"></i>
+
+<h2>
+Conocer Honduras también es aprender
+a valorar lo nuestro.
+</h2>
+
+<p>
+Cada paisaje, cada tradición y cada historia
+nos recuerda la riqueza que existe en nuestra tierra.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     INFORMACIÓN
+========================================================= -->
+
+<section class="section section-white">
+
+<div class="section-title reveal">
+
+<div class="eyebrow">
+Información
+</div>
+
+<h2>
+Santa Bárbara
+</h2>
+
+<p>
+Un destino hondureño donde la naturaleza
+y la cultura se encuentran.
+</p>
+
+</div>
+
+
+<div class="info-grid">
+
+<div class="info-box reveal">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>Ubicación</h3>
+
+<p>
+Occidente de Honduras.
+</p>
+
+</div>
+
+
+<div class="info-box reveal">
+
+<i class="fa-solid fa-flag"></i>
+
+<h3>País</h3>
+
+<p>
+Honduras, corazón de Centroamérica.
+</p>
+
+</div>
+
+
+<div class="info-box reveal">
+
+<i class="fa-solid fa-camera"></i>
+
+<h3>Experiencia</h3>
+
+<p>
+Naturaleza, cultura, tradiciones y paisajes.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     REDES SOCIALES
+========================================================= -->
+
+<section class="section social-section">
+
+<div class="section-title reveal">
+
+<div class="eyebrow">
+Síguenos
+</div>
+
+<h2>
+Santa Bárbara en redes sociales
+</h2>
+
+<p>
+Descubre más lugares, paisajes, actividades
+y momentos especiales de Santa Bárbara.
+</p>
+
+</div>
+
+
+<div class="social-cards">
+
+<a href="#" class="social-card reveal" target="_blank">
+
+<div class="social-card-icon">
+<i class="fa-brands fa-facebook-f"></i>
+</div>
+
+<div>
+
+<h3>Facebook</h3>
+
+<p>Santa Bárbara, Honduras</p>
+
+</div>
+
+</a>
+
+
+<a href="#" class="social-card reveal" target="_blank">
+
+<div class="social-card-icon">
+<i class="fa-brands fa-instagram"></i>
+</div>
+
+<div>
+
+<h3>Instagram</h3>
+
+<p>Santa Bárbara, Honduras</p>
+
+</div>
+
+</a>
+
+
+<a href="#" class="social-card reveal" target="_blank">
+
+<div class="social-card-icon">
+<i class="fa-brands fa-tiktok"></i>
+</div>
+
+<div>
+
+<h3>TikTok</h3>
+
+<p>Descubre Santa Bárbara</p>
+
+</div>
+
+</a>
+
+
+<a href="https://youtube.com/shorts/z-5Vw5oDd2A?si=zPYbUXqWxSq9FaPE"
+class="social-card reveal"
+target="_blank">
+
+<div class="social-card-icon">
+<i class="fa-brands fa-youtube"></i>
+</div>
+
+<div>
+
+<h3>YouTube</h3>
+
+<p>Videos de Santa Bárbara</p>
+
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     AUTORA
+========================================================= -->
+
+<section class="section author">
+
+<div class="reveal">
+
+<div class="eyebrow" style="color:#d7b86b;">
+Proyecto turístico
+</div>
+
+<h2>
+Explorado y presentado por
+</h2>
+
+<div class="author-name">
+Mirna Yaneth Amaya Morales
+</div>
+
+<p>
+Un proyecto académico realizado con creatividad,
+dedicación y el propósito de mostrar, valorar
+y compartir la belleza natural y cultural
+de Santa Bárbara, Honduras.
+</p>
+
+
+<div class="final-signature">
+
+<i class="fa-solid fa-feather-pointed"></i>
+
+Creado con dedicación por
+<span>Mirna Yaneth</span>
+
+</div>
+
+
+<div class="social">
+
+<a href="#" aria-label="Facebook">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a href="#" aria-label="Instagram">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="#" aria-label="TikTok">
+<i class="fa-brands fa-tiktok"></i>
+</a>
+
+<a href="https://youtube.com/shorts/z-5Vw5oDd2A?si=zPYbUXqWxSq9FaPE"
+target="_blank"
+aria-label="YouTube">
+
+<i class="fa-brands fa-youtube"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<p>
+
+© 2026 Santa Bárbara, Honduras ·
+
+<strong>
+Mirna Yaneth Amaya Morales
+</strong>
+
+</p>
+
+<p>
+
+Proyecto académico ·
+Bachillerato Técnico Profesional en Informática
+
+</p>
+
+</footer>
+
+
+<!-- =========================================================
+     BOTÓN ARRIBA
+========================================================= -->
+
+<a href="#inicio"
+class="top-button"
+aria-label="Volver arriba">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</a>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   ANIMACIONES AL HACER SCROLL
+========================================================= */
+
+const elements =
+document.querySelectorAll('.reveal');
+
+const observer =
+new IntersectionObserver(
+
+(entries) => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('visible');
+
+}
+
+});
+
+},
+
+{
+threshold:.12
+}
+
+);
+
+elements.forEach(element => {
+
+observer.observe(element);
+
+});
+
+
+/* =========================================================
+   BOTÓN VOLVER ARRIBA
+========================================================= */
+
+window.addEventListener('scroll',()=>{
+
+const button =
+document.querySelector('.top-button');
+
+if(window.scrollY > 500){
+
+button.style.opacity='1';
+button.style.pointerEvents='auto';
+
+}else{
+
+button.style.opacity='.65';
+
+}
+
+});
+
+
+/* =========================================================
+   EFECTO SUAVE EN EL LOGO
+========================================================= */
+
+const logo =
+document.querySelector('.logo');
+
+window.addEventListener('scroll',()=>{
+
+if(window.scrollY > 80){
+
+logo.style.transform='scale(.95)';
+
+}else{
+
+logo.style.transform='scale(1)';
+
+}
+
+});
+
+
+</script>
+
+</body>
+</html>
