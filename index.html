@@ -128,6 +128,58 @@ img{
    HERO
 ========================================================= */
 
+/* MARQUESINA AGREGADA */
+
+.marquesina{
+    position:absolute;
+    top:105px;
+    left:0;
+    width:100%;
+    overflow:hidden;
+    z-index:5;
+    padding:12px 0;
+    background:rgba(20,43,32,.78);
+    border-top:1px solid rgba(215,184,107,.45);
+    border-bottom:1px solid rgba(215,184,107,.45);
+    backdrop-filter:blur(8px);
+}
+
+.marquesina-texto{
+    display:inline-block;
+    white-space:nowrap;
+    padding-left:100%;
+    color:#f7f4ed;
+    font-family:'Playfair Display',serif;
+    font-size:16px;
+    letter-spacing:1px;
+    animation:deslizar-marquesina 22s linear infinite;
+}
+
+.marquesina-texto span{
+    color:#d7b86b;
+    font-weight:700;
+}
+
+@keyframes deslizar-marquesina{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+@media(max-width:600px){
+    .marquesina{
+        top:95px;
+        padding:10px 0;
+    }
+
+    .marquesina-texto{
+        font-size:13px;
+    }
+}
+
 .hero{
 
     min-height:100vh;
@@ -437,7 +489,7 @@ img{
     color:rgba(255,255,255,.72);
 }
 
- 
+
 /* =========================================================
    INTRODUCCIÓN
 ========================================================= */
@@ -645,7 +697,6 @@ img{
 
     font-size:24px;
 }
-
 
 /* =========================================================
    NATURALEZA
@@ -1474,7 +1525,6 @@ footer strong{
     transform:translateY(-5px);
 }
 
-
 /* =========================================================
    ANIMACIONES
 ========================================================= */
@@ -1646,7 +1696,6 @@ footer strong{
 
 </head>
 
-
 <body>
 
 
@@ -1680,6 +1729,16 @@ Santa <span>Bárbara</span>
 ========================================================= -->
 
 <section class="hero" id="inicio">
+
+<!-- MARQUESINA AGREGADA -->
+
+<div class="marquesina">
+    <div class="marquesina-texto">
+        <span>✦ SANTA BÁRBARA ✦</span>
+        Tierra de cultura, tradición y belleza natural,
+        un orgullo de Honduras. ✦
+    </div>
+</div>
 
 <div class="hero-content">
 
@@ -1742,7 +1801,6 @@ Una mirada de Mirna
 </a>
 
 </section>
-
 
 <!-- =========================================================
      CONOCE
@@ -2066,7 +2124,6 @@ de esta región de Honduras.
 
 </section>
 
-
 <!-- =========================================================
      CINCO SENTIDOS
 ========================================================= -->
@@ -2249,7 +2306,6 @@ este hermoso departamento.
 </div>
 
 </section>
-
 
 <!-- =========================================================
      CULTURA
@@ -2767,7 +2823,6 @@ aria-label="Volver arriba">
 
 <script>
 
-
 /* =========================================================
    ANIMACIONES AL HACER SCROLL
 ========================================================= */
@@ -2848,7 +2903,6 @@ logo.style.transform='scale(1)';
 }
 
 });
-
 
 </script>
 
